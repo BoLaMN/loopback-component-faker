@@ -1,0 +1,34 @@
+{
+  "name": "Customer",
+  "base": "PersistedModel",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "accountId": {
+      "type": "number",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "relations": {
+    "orders": {
+      "type": "hasMany",
+      "model": "Order",
+      "through": "OrderProduct",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+  ],
+  "mixins": {
+  },
+  "validations": [],
+  "methods": []
+}

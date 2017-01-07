@@ -1,0 +1,23 @@
+{
+  "name": "Order",
+  "base": "PersistedModel",
+  "properties": {},
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "mixins": {
+  },
+  "validations": [],
+  "acls": [
+  ],
+  "methods": {}
+}
